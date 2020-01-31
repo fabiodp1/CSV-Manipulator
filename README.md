@@ -8,7 +8,10 @@ Fabio Di Pane
 #### Last Update
 31/01/2020
 
-#### Installation
+#### Prerequisites
+- [Node.js](https://nodejs.org/)
+
+#### Installing
 `$npm install`
 
 #### Run server
@@ -17,6 +20,14 @@ Inside the src folder: </br>
 
 And go to
 
->https://localhost:5001
+> - https://localhost:5001 </br>
 or
->https://localhost:5000
+> - https://localhost:5000
+
+## Built with
+- [ASP.NET Core 3](https://docs.microsoft.com/it-it/aspnet/core/?view=aspnetcore-3.1)
+- [Vue.js](https://vuejs.org/)
+- [TypeScript](https://www.typescriptlang.org/index.html)
+
+#### For more informations
+read the documentation file
