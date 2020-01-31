@@ -6,8 +6,8 @@ Documentazione per lo sviluppo di una applicazione web, test di candidatura pres
 
 ### Requisiti Tecnologici
 
-| **N°**   |      **Description**      |  **Flag** |
-|----------|:-------------:|------:|
+| **N°**   |      **Description**      |  **Flag**  |
+|:----------:|:-------------:|:------:|
 |  |  **Server-Side** |  |
 | 0 |    FW ASP.NET Core 3.1 MVC   |   Mandatory |
 | 1 | C# > 7 |   Mandatory |
@@ -22,7 +22,7 @@ Documentazione per lo sviluppo di una applicazione web, test di candidatura pres
 ### Requisiti Funzionali
 
 | **N°**   |      **Description**      |  **Flag** |
-|----------|:-------------:|------:|
+|:----------:|:-------------:|:------:|
 | 0 |    I’utente deve poter facilmente caricare un file csv, potendo indicare se presenta degli header o meno   |   Mandatory |
 | 1 | Il file dovrà essere elaborato e renderizzato graficamente tenendo conto della presenza o meno degli header |   Mandatory |
 | 2 | l’utente potrà aggiungere/rimuovere colonne dalla tabella renderizzata |   Mandatory |
@@ -186,7 +186,7 @@ Procedo alla dichiarazione dei types per le variabili dell’app.
 
 Creo un progetto base tramite il template di Visual Studio per un ASP.NET Core 3 MVC Web App.
 
-La predispongo per farle servire i file statici che saranno costruiti dalla web app nella cartella wwwroot, inserendo nel file Startup.cs il metodo app.UseDefaultFiles() assieme a app.UseStaticFiles().
+La predispongo per farle servire i file statici che saranno costruiti dalla web app (in seguito alla configurazione di webpack) nella cartella *wwwroot*, inserendo nel file *Startup.cs* il metodo *app.UseDefaultFiles()* assieme a *app.UseStaticFiles()*.
 
 #### Creazione REST API
 
