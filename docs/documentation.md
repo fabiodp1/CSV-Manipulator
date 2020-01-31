@@ -6,22 +6,22 @@ Documentazione per lo sviluppo di una applicazione web, test di candidatura pres
 
 ### Requisiti Tecnologici
 
-| **N°**   |      **Description**      |  **Flag**  |
+| **N°**   |      **DESCRIPTION**      |  **FLAG**  |
 |:----------:|:-------------:|:------:|
-|  |  **Server-Side** |  |
+|  |  **SERVER-SIDE** |  |
 | 0 |    FW ASP.NET Core 3.1 MVC   |   Mandatory |
 | 1 | C# > 7 |   Mandatory |
-|  | **Client-Side** |    |
+|  | **CLIENT-SIDE** |    |
 | 0 | Vue.js |   Mandatory |
 | 1 | TypeScript |   Mandatory |
 | 2 | Webpack |   Mandatory |
-|  | **Generali** |    |
+|  | **OTHERS** |    |
 | 0 | Dovrà essere rispettata la struttura richiesta dalla documentazione del progetto |   Mandatory |
 | 1 | Dovranno essere rispettate le scelte stilistiche come da documentazione del progetto |   Mandatory |
 
 ### Requisiti Funzionali
 
-| **N°**   |      **Description**      |  **Flag** |
+| **N°**   |      **DESCRIPTION**      |  **FLAG** |
 |:----------:|:-------------:|:------:|
 | 0 |    I’utente deve poter facilmente caricare un file csv, potendo indicare se presenta degli header o meno   |   Mandatory |
 | 1 | Il file dovrà essere elaborato e renderizzato graficamente tenendo conto della presenza o meno degli header |   Mandatory |
