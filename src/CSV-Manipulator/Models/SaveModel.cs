@@ -7,7 +7,7 @@ namespace CSV_Manipulator.Models
 	{
 		public string JsonString { get; set; }
 
-		public void OnSave()
+		public void OnSet()
 		{
 			// defining a file to write to
 			string jsonFile = Path.Combine (Environment.CurrentDirectory, "new-csv.json");
