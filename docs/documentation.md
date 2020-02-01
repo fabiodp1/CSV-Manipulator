@@ -6,28 +6,28 @@ Documentazione per lo sviluppo di una applicazione web, test di candidatura pres
 
 ### Requisiti Tecnologici
 
-| **N°**   |      **DESCRIPTION**      |  **FLAG**  |
-|:----------:|:-------------:|:------:|
-|  |  **SERVER-SIDE** |  |
-| 0 |    FW ASP.NET Core 3.1 MVC   |   Mandatory |
-| 1 | C# > 7 |   Mandatory |
-|  | **CLIENT-SIDE** |    |
-| 0 | Vue.js |   Mandatory |
-| 1 | TypeScript |   Mandatory |
-| 2 | Webpack |   Mandatory |
-|  | **OTHERS** |    |
-| 0 | Dovrà essere rispettata la struttura richiesta dalla documentazione del progetto |   Mandatory |
-| 1 | Dovranno essere rispettate le scelte stilistiche come da documentazione del progetto |   Mandatory |
+|  **N°** |                                   **DESCRIPTION**                                    |  **FLAG**  |
+|:-------:|:------------------------------------------------------------------------------------:|:----------:|
+|         |                                   **SERVER-SIDE**                                    |            |
+|    0    |                               FW ASP.NET Core 3.1 MVC                                |  Mandatory |
+|    1    |                                       C# > 7                                         |  Mandatory |
+|         |                                   **CLIENT-SIDE**                                    |            |
+|    0    |                                       Vue.js                                         |  Mandatory |
+|    1    |                                     TypeScript                                       |  Mandatory |
+|    2    |                                       Webpack                                        |  Mandatory |
+|         |                                     **OTHERS**                                       |            |
+|    0    |   Dovrà essere rispettata la struttura richiesta dalla documentazione del progetto   |  Mandatory |
+|    1    | Dovranno essere rispettate le scelte stilistiche come da documentazione del progetto |  Mandatory |
 
 ### Requisiti Funzionali
 
-| **N°**   |      **DESCRIPTION**      |  **FLAG** |
-|:----------:|:-------------:|:------:|
-| 0 |    I’utente deve poter facilmente caricare un file csv, potendo indicare se presenta degli header o meno   |   Mandatory |
-| 1 | Il file dovrà essere elaborato e renderizzato graficamente tenendo conto della presenza o meno degli header |   Mandatory |
-| 2 | l’utente potrà aggiungere/rimuovere colonne dalla tabella renderizzata |   Mandatory |
-| 3 | l’utente potrà modificare le singole celle di dati e intestazioni delle colonne, fino al raggiungimento del risultato richiesto |   Mandatory |
-| 4 | l’utente tramite un pulsante potrà salvare localmente il file modificato, in formato JSON |   Mandatory |
+|  **N°** |                                               **DESCRIPTION**                                               |  **FLAG**  |
+|:-------:|:-----------------------------------------------------------------------------------------------------------:|:----------:|
+|    0    |    I’utente deve poter facilmente caricare un file csv, potendo indicare se presenta degli header o meno    |  Mandatory |
+|    1    | Il file dovrà essere elaborato e renderizzato graficamente tenendo conto della presenza o meno degli header |  Mandatory |
+|    2    |                  l’utente potrà aggiungere/rimuovere colonne dalla tabella renderizzata                     |  Mandatory |
+|    3    | l’utente potrà modificare le singole celle di dati e intestazioni delle colonne, fino al raggiungimento del risultato richiesto |   Mandatory |
+|    4    |            l’utente tramite un pulsante potrà salvare localmente il file modificato, in formato JSON        |  Mandatory |
 | 5 | Durante la modifica l’utente potrà usare funzioni aggiuntive per la pulizia dei dati, caratteri non richiesti ecc. |   Mandatory |
 
 ### Caratteristiche per il Successo
@@ -41,7 +41,7 @@ Documentazione per lo sviluppo di una applicazione web, test di candidatura pres
           Sarà possibile un supporto “a comparti stagni”, permettendo di aggiungere nuove funzionalità o risolvere problematiche senza che venga modificato, intaccato o messo a rischio il comparto non coinvolto dalle modifiche.
 -   **Libertà di Scegliere**
 
-    >In seguito ad una semplice configurazione, il suo utilizzo da parte dell’utente non sarà vincolato ad un determinato servizio server, ma sarà possibile utilizzare quello che più lo soddisfa, senza dover rinunciare a tutte le funzionalità del CSV Manipulator e senza che venga intaccata la sua facilità e immediatezza di utilizzo.
+    >In seguito ad una semplice configurazione, il suo utilizzo da parte dell’utente non sarà vincolato ad un determinata interfaccia server, ma sarà possibile utilizzare quella più, senza dover rinunciare a tutte le funzionalità del CSV Manipulator e senza che venga intaccata la sua facilità e immediatezza di utilizzo.
 -   **Leggero, Prestante e Cross-Platform**
 
     >Grazie alla tecnologia Vue.js e ASP.NET Core 3 il dispendio di risorse è molto limitato, rendendolo leggero, veloce e cross-platform, evitando la preoccupazione dell’incognita di doverlo far girare su altri OS o Browser, senza che vada ad intaccare o rallentare gli altri processi produttivi.
