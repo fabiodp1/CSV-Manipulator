@@ -26,8 +26,10 @@ namespace CSV_Manipulator.Controllers
 			{
 				var body = reader.ReadToEnd();
 
-				new SaveModel { JsonString = body };
-				Console.Write(body);
+				SaveModel file = new SaveModel {JsonString = body};
+
+				file.OnSet();
+
 			}
 			return Ok("File was saved!");
 		}

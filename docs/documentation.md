@@ -7,8 +7,8 @@ Documentazione per lo sviluppo di una applicazione web, test di candidatura pres
 ### Requisiti Tecnologici
 
 | **N°**   |      **Description**      |  **Flag**  |
-|:----------:|:-------------:|:------:|
-|  |  **Server-Side** |  |
+|:--------:|:-------------------------:|:----------:|
+|          |      **Server-Side**      |            |
 | 0 |    FW ASP.NET Core 3.1 MVC   |   Mandatory |
 | 1 | C# > 7 |   Mandatory |
 |  | **Client-Side** |    |
