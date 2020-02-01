@@ -109,7 +109,7 @@ export default {
         reader.readAsText(e.target.files[0]);
         // On load save the result in the variable
         reader.onload = function(event: any) {
-          vm.LoadedFile = event.target.result;
+          vm.LoadedFile = event.target.result.replace(/\r/g, "");
         };
         // Manage errors
         reader.onerror = function(evt: any) {
@@ -130,6 +130,7 @@ export default {
       }
       // Change the IsParsed status
       vm.IsParsed = true;
+      // split lines
       let lines: string[] = loaded.split("\n");
 
       if (vm.HasHeaders) {
@@ -145,6 +146,7 @@ export default {
         if (vm.HasHeaders && indexLine < 1) {
           return;
         }
+        // split lines for every element and then push it to the array.
         parsed.push(line.split(","));
       });
       // delete the last line that will be undefined
@@ -200,14 +202,12 @@ export default {
     PostData: function(jsonFile: object[]) {
       let element = document.getElementById("fileName") as HTMLInputElement;
       let fileName: string = element.value.trim();
-      console.log(fileName);
+
       axios({
         method: "post",
         url: "api/save",
-        data: {
-          FileName: fileName,
-          JsonString: jsonFile
-        }
+        // FileName: fileName,
+        data: jsonFile
       });
     },
     SaveJSON: function(destinationFile: object[]) {

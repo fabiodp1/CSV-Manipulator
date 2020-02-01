@@ -10,6 +10,7 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Folder Include="saved\" />
     <Folder Include="wwwroot\js\" />
   </ItemGroup>
 

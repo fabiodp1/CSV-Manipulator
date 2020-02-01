@@ -22,21 +22,21 @@ namespace CSV_Manipulator.Controllers
 		public IActionResult Save()
 		{
 
+			// Create the instance for the stream reader object
 			using (var reader = new StreamReader(Request.Body))
 			{
+				// read the stream and store it
 				var body = reader.ReadToEnd();
 
+				// instantiate the save model and assign to his property JsonString the value of body
 				SaveModel file = new SaveModel {JsonString = body};
 
+				// run saving method
 				file.OnSet();
 
 			}
+			// return the ok status
 			return Ok("File was saved!");
-		}
-
-		public IActionResult Privacy()
-		{
-			return View();
 		}
 
 		[ResponseCache(Duration = 0, Location = ResponseCacheLocation.None, NoStore = true)]
