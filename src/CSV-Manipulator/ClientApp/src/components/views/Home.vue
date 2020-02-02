@@ -1,5 +1,5 @@
 <template>
-  <div align="center">
+  <div align="center" v-if="!IsSaved">
     <!-- If file was already parsed don't render this section -->
     <template v-if="!IsParsed">
       <h4>Chose a csv file and edit it!</h4>
@@ -83,6 +83,9 @@
       </div>
     </template>
   </div>
+  <div align="center" v-else>
+    <h1>File Saved!</h1>
+  </div>
 </template>
 
 <script lang="ts">
@@ -97,7 +100,8 @@ export default {
       LoadedFile: "" as string,
       ParsedFile: [] as string[][],
       IsParsed: false,
-      Headers: [] as string[]
+      Headers: [] as string[],
+      IsSaved: false
     };
   },
   methods: {
@@ -187,11 +191,12 @@ export default {
         // Create the "key: value" elements to push into the result
         item.map(function(data, idx) {
           if (data != "") {
-            Obj[headers[idx]] = data;
+            Obj[headers[idx].trim()] = data.trim();
           } else {
             return;
           }
         });
+        // if Object is not empty push it
         if (Object.entries(Obj).length != 0) {
           result.push(Obj);
         }
@@ -214,6 +219,7 @@ export default {
       let vm = this as any;
       destinationFile = vm.ToJSON(vm.Headers, vm.ParsedFile);
       console.log(destinationFile);
+      vm.IsSaved = true;
       vm.PostData(destinationFile);
     },
     CheckHeaders: function() {
