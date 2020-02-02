@@ -203,3 +203,7 @@ Tutto questo passa dalla comprensione di base del funzionamento delle REST API, 
 Creo un Model _SaveModel_ e un Controller _ApiController_ che si occuperà di ricevere la richiesta HTTP proveniente dal client e con un metodo _Save_ passare il body della richiesta al modello. Quest’ultimo si occuperà del suo salvataggio in locale.
 
 Non funziona come previsto, continuo con lo studio di C#.
+
+Nel *SaveModel* inmplemento il metodo *OnSet* che verrà chiamato dal Controller e si occuperà della creazione del file, scrittura e salvataggio con liberazione delle risorse.
+
+Finalmente funziona come sperato, rimane il problema che, creando una richiesta http che contenga un oggetto con due parametri, uno contenente il nome prescelto per il file e uno il json stesso, non riesco ad accedere ai singoli paramentri per utilizzarli nella struttura del modello.
