@@ -28,6 +28,7 @@ or
 - [ASP.NET Core 3](https://docs.microsoft.com/it-it/aspnet/core/?view=aspnetcore-3.1)
 - [Vue.js](https://vuejs.org/)
 - [TypeScript](https://www.typescriptlang.org/index.html)
+- [Webpack](https://webpack.js.org/)
 
 #### For more informations
 read the documentation file
