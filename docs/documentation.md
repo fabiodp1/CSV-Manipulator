@@ -43,17 +43,17 @@ Sarà possibile un supporto “a comparti stagni”, permettendo di aggiungere n
 
 - **Libertà di Scegliere**
 
-  > In seguito ad una semplice configurazione, il suo utilizzo da parte dell’utente non sarà vincolato ad un determinata interfaccia server, ma sarà possibile utilizzare quella più, senza dover rinunciare a tutte le funzionalità del CSV Manipulator e senza che venga intaccata la sua facilità e immediatezza di utilizzo.
+  > In seguito ad una semplice configurazione, il suo utilizzo da parte dell’utente non sarà vincolato ad una determinata interfaccia server, ma sarà possibile utilizzare quella più adatta, senza dover rinunciare a tutte le funzionalità del CSV Manipulator e senza che venga intaccata la sua facilità e immediatezza di utilizzo.
 
 - **Leggero, Prestante e Cross-Platform**
 
-  > Grazie alla tecnologia Vue.js e ASP.NET Core 3 il dispendio di risorse è molto limitato, rendendolo leggero, veloce e cross-platform, evitando la preoccupazione dell’incognita di doverlo far girare su altri OS o Browser, senza che vada ad intaccare o rallentare gli altri processi produttivi.
+  > Grazie alla tecnologia Vue.js e ASP.NET Core 3 il dispendio di risorse è molto limitato, rendendo l'applicazione leggera, veloce e cross-platform, evitando problemi di compatibilità con altri OS o Browser, senza che vada ad intaccare o rallentare gli altri processi produttivi.
 
 ### Strumenti di Sviluppo
 
 Per la parte server verrà utilizzato Visual Studio 2019, per la parte client Visual Studio Code.
 
-### Analisi punti di forza/debolezza
+### Analisi punti di forza/debolezza interne
 
 #### Punti di forza:
 
@@ -82,15 +82,15 @@ Tenendo conto dell’analisi dei punti forza/debolezza, dopo essermi procurato l
 
 Il progetto verrà suddiviso in una serie di task e subtasks in modo da creare un ordine operativo con cui organizzare e ordinare il lavoro da svolgere. La documentazione verrà mantenuta ordinata e aggiornata durante tutto lo svolgimento del progetto.
 
-Durante la descrizione di ogni task verranno indicate in ordine cronologico le operazioni svolte e le problematiche riscontrate.
+> Durante la descrizione di ogni task verranno indicate in ordine cronologico le operazioni svolte e le problematiche riscontrate.
 
 ### Tasks
 
 1.  **Sviluppo parte client-side**
 
-    1.  Conoscenze base Vue.js
+    1.  Conoscenze base Vue.js, TypeScript, Webpack
     2.  Creazione dell’interfaccia e suo funzionamento tramite Vue.js
-    3.  Implementazione di TypeScript
+    3.  Implementazione di webpack e TypeScript
 
 2.  **Sviluppo parte server-side**
 
@@ -106,9 +106,9 @@ Durante la descrizione di ogni task verranno indicate in ordine cronologico le o
 
 ### Sviluppo parte Client-Side
 
-- **Acquisizione conoscenze di base Vue.js**
+- **Acquisizione conoscenze di base Vue.js, TypeScipt e Webpack**
 
-  Utilizzo corsi online per acquisire conoscenze base sul suo funzionamento e utilizzo.
+  Utilizzo corsi online, libri e documentazioni per acquisire conoscenze base sul loro funzionamento e utilizzo.
 
 - **Analisi e scelta del tipo di interfaccia, l’UI dovrà avere:**
 
@@ -131,15 +131,15 @@ Durante la descrizione di ogni task verranno indicate in ordine cronologico le o
 
 #### Creazione dell’interfaccia e suo funzionamento tramite Vue.js
 
-Viene inizializzato npm, il file di configurazione delle dipendenze, webpack e installati i pacchetti utili per l’hot-swap (webpack-cli webpack-dev-middleware webpack-dev-server webpack-hot-middleware), aggiunta nel file webpack.config.js la sezione devServer e modificato il file package.json con gli script richiesti. Inoltre installo in production cross-env in modo che non debba essere installato da un possibile collaboratore.
+Viene inizializzato npm, il file di configurazione delle dipendenze, webpack e installati i pacchetti utili per l’hot-swap (*webpack-cli webpack-dev-middleware webpack-dev-server webpack-hot-middleware*), aggiunta nel file *webpack.config.js* la sezione *devServer* e modificato il file *package.json* con gli script richiesti. Inoltre installo in development mode *cross-env* in modo che non debba essere installato da un possibile collaboratore, risultando fra le dipendenze.
 
-Viene suddivisa la pagina principale, utilizzando Grid CSS, nelle 3 zone prestabilite in cui Vue renderizzerà i vari componenti. Nella riga in alto verrà collocata la barra di navigazione nella centrale il contenuto e nell’ultima il footer.
+Viene suddivisa la pagina principale, utilizzando Grid CSS, nelle 3 zone prestabilite in cui Vue renderizzerà i vari componenti. Nella riga in alto verrà collocata la barra di navigazione, nella centrale il contenuto e nell’ultima il footer.
 
-Creazione della componente Home che conterrà il cuore dell’app. Una volta creati i componenti di base e i bottoni, procedo alla creazione dei metodi di caricamento del file e la loro elaborazione. Per il caricamento e lettura del file utilizzo FileReader.
+Creazione della componente Home che conterrà il cuore dell’app. Una volta creati i componenti di base e i bottoni, procedo alla creazione dei metodi di caricamento del file e la loro elaborazione. Per il caricamento e lettura del file utilizzo *FileReader*.
 
-Creato il metodo per il bottone di parsing e la renderizzazine della tabella, i metodi di eliminazione e aggiunta colonne e quello per la trasformazione del file in formato JSON, che verrà immagazzinato nella variabile JSONFIle.
+Viene creato il metodo per il bottone di parsing e la renderizzazine della tabella, i metodi di eliminazione e aggiunta colonne e quello per la trasformazione del file in formato JSON, che verrà immagazzinato nella variabile JSONFIle.
 
-Aggiunta la componente VueRouter per il routing fra le pagine dell’app.
+Aggiunta la componente *VueRouter* per il routing fra le pagine dell’app.
 
 Le funzioni base ci sono tutte, in seguito sarà da migliorare lo stile e le caratteristiche responsive della pagina.
 
@@ -151,19 +151,19 @@ Valutazione della configurazione più efficiente per l’installazione e utilizz
 
 La sintassi Vue utilizzata fin adesso (Options API) per la creazione dei componenti vue potrebbe non essere compatibile, valuto se sia meglio utilizzare la Composition API (più complessa e ancora in beta, ma creata per essere compatibile con TypeScript, inoltre con Vue 3 sarà la sintassi utilizzata) o la Class API. Valuterò dopo una maggiore documentazione e diversi tentativi.
 
-**_Problematiche_** sembra più complesso del previsto il far riconoscere i file componente .vue a typescript, procederò cercando altri metodi, fra questo l’uso della vue-cli.
+**_Problematiche_** complesso far riconoscere i file componente *.vue* a typescript, procederò cercando altri metodi, fra questo l’uso della vue-cli.
 
 Dopo una prima installazione tramite vue-cli andata male, aggiungo il pacchetto @vue/cli-service al progetto e l’installazione va a buon fine.
 
-Procedo alla valutazione dell’installazione con sintassi Class e senza per vedere le differenze. Con Options Syntax continua a dare errori, ho provato diversi metodi ma non riesce a riconoscere propriamente i file .vue.
+Procedo alla valutazione dell’installazione con sintassi Class e senza per vedere le differenze. Con Options Syntax continua a dare errori, provati diversi metodi, continua a non riconoscere propriamente i file .vue.
 
 Creo un altro branch e provo con la Class Syntax.
 
-Continua a dare errore riguardante la versione di webpack installata, installo npm-check-updates e faccio un aggiornamento.
+Continua a dare errore riguardante la versione di webpack installata, installo *npm-check-updates* e faccio un aggiornamento.
 
 Probabilmente il problema risiede nella file json di configurazione, approfondisco lo studio e la comprensione di webpack e typescript tramite la documentazione.
 
-Considerando che l’uso precedente delle CLI e i loro template ha portato a dei progetti con feature inutili e che non ho scelto personalmente, e considerando che una maggiore comprensione di queste tecnologie passa da una sperimentazione da 0, creo un altro progetto di prova con gli stessi file Vue e JS, ma senza configurazione webpack e Typescript.
+Considerando che l’uso precedente delle CLI e i loro template ha portato a dei progetti con feature inutili, non ho scelti personalmente e considerando che una maggiore comprensione di queste tecnologie passa da una sperimentazione da 0, creo un altro progetto di prova con gli stessi file Vue e JS, ma senza configurazione webpack e Typescript.
 
 Mi occuperò di una loro configurazione manuale.
 
@@ -174,11 +174,11 @@ Proverò con il plugin _UglifyJsPlugin_ di webpack.
 
 Problema non risolto, disinstallo _uglify_ e _babel-loader_.
 
-Si tratta solo di un messaggio, non compromette la renderizzazione e costruzione del progetto, annullo la comparsa delle notifiche con “hints: false”.
+Si tratta solo di un messaggio di avviso, non compromette la renderizzazione e costruzione del progetto, annullo la comparsa delle notifiche aggiungendo l'opzione *hints: false*.
 
 Procedo con l’installazione di _typescript_ e di _ts-loader_ e la configurazione del file di configurazione di webpack.
 
-Dopo diversi giorni di continui errori dovuti al riconoscimento dei file .vue da parte di typescript, risolvo creando il file vue-shim.d.ts per l’ambient module declaration. TypeScript riconosce solo file statici come JS o JSON, per questo motivo non riconosce le estensioni .vue. Modifico la configurazione di webpack in modo che durante il binding venga attaccata l'estensione _ts_ ai file _vue_.
+Dopo diversi giorni di continui errori dovuti al riconoscimento dei file *.vue* da parte di typescript, risolvo creando il file vue-shim.d.ts per l’ambient module declaration. TypeScript riconosce solo file statici come JS o JSON, per questo motivo non riconosce le estensioni .vue. Modifico la configurazione di webpack in modo che durante il binding venga attaccata l'estensione _ts_ ai file _vue_.
 Procedo alla dichiarazione dei types per le variabili dell’app.
 
 **_Problema risolto:_** Dopo una serie di tentativi con errori da parte di TypeScript, risolvo dichiarando la keyword _this_ come _as any_.
@@ -189,7 +189,7 @@ Procedo alla dichiarazione dei types per le variabili dell’app.
 
 #### Configurazione generale dell’app MVC
 
-Creo un progetto base tramite il template di Visual Studio per un ASP.NET Core 3 MVC Web App.
+Creo un progetto base tramite il template di Visual Studio per ASP.NET Core 3 MVC Web App.
 
 La predispongo per farle servire i file statici che saranno costruiti dalla web app (in seguito alla configurazione di webpack) nella cartella _wwwroot_, inserendo nel file _Startup.cs_ il metodo _app.UseDefaultFiles()_ assieme a _app.UseStaticFiles()_.
 
