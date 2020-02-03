@@ -2,7 +2,7 @@
 
 ### Descrizione
 
-Documentazione per lo sviluppo di una applicazione web, test di candidatura presso NGS Spa.
+Documentazione per lo sviluppo di una applicazione web, test di candidatura presso NGS srl.
 
 ### Requisiti Tecnologici
 
