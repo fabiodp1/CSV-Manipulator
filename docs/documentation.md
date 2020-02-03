@@ -39,8 +39,7 @@ Documentazione per lo sviluppo di una applicazione web, test di candidatura pres
 - **Scalabile, Modulare e Sicuro**
 
   > La parte server e client sono sviluppate come due entità distinte in comunicazione fra loro, in maniera modulare, permettendo una maggiore scalabilità e semplificando successive implementazioni.
-
-        Sarà possibile un supporto “a comparti stagni”, permettendo di aggiungere nuove funzionalità o risolvere problematiche senza che venga modificato, intaccato o messo a rischio il comparto non coinvolto dalle modifiche.
+Sarà possibile un supporto “a comparti stagni”, permettendo di aggiungere nuove funzionalità o risolvere problematiche senza che venga modificato, intaccato o messo a rischio il comparto non coinvolto dalle modifiche.
 
 - **Libertà di Scegliere**
 
