@@ -6,7 +6,7 @@
 Fabio Di Pane
 
 #### Last Update
-02/02/2020
+03/02/2020
 
 #### Prerequisites
 - [Node.js](https://nodejs.org/)
@@ -25,7 +25,7 @@ or
 > - https://localhost:5000
 
 ## Built with
-- [ASP.NET Core 3](https://docs.microsoft.com/it-it/aspnet/core/?view=aspnetcore-3.1)
+- [ASP.NET Core 3.0](https://docs.microsoft.com/it-it/aspnet/core/?view=aspnetcore-3.1)
 - [Vue.js](https://vuejs.org/)
 - [TypeScript](https://www.typescriptlang.org/index.html)
 - [Webpack](https://webpack.js.org/)
