@@ -106,14 +106,14 @@ export default {
   },
   methods: {
     LoadCSV: function(e: any) {
-      let vm = this as any;
+      const self = this;
       // Utilize FileReader to load and read the uploaded file
       if (window.FileReader) {
         let reader = new FileReader();
         reader.readAsText(e.target.files[0]);
         // On load save the result in the variable
         reader.onload = function(event: any) {
-          vm.LoadedFile = event.target.result.replace(/\r/g, "");
+          self.LoadedFile = event.target.result.replace(/\r/g, "");
         };
         // Manage errors
         reader.onerror = function(evt: any) {
